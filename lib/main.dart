@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'chapter03/flutter_layout_page.dart';
+import 'chapter03/gesture_listen_page.dart';
+import 'chapter03/launch_page.dart';
 import 'chapter03/less_group-page.dart';
+import 'chapter03/res_page.dart';
 import 'chapter03/stateful_group_page.dart';
 
 void main() => runApp(MyApp());
@@ -25,6 +28,9 @@ class MyApp extends StatelessWidget {
         'less': (BuildContext context) => LessGroupPage(),
         'ful': (BuildContext context) => StatefulGroup(),
         'layout': (BuildContext context) => FlutterLayoutPage(),
+        'gesture': (BuildContext context) => GesturePage(),
+        'res': (BuildContext context) => ResPage(),
+        'urlluanch': (BuildContext context) => LaunchPage(),
       },
     );
   }
@@ -84,6 +90,9 @@ class _RouteNavigatorState extends State<RouteNavigator> {
         _item('statelessWidget基础组件', LessGroupPage(), 'less'),
         _item('statefulWidget基础组件', StatefulGroup(), 'ful'),
         _item('layout布局', FlutterLayoutPage(), 'layout'),
+        _item('手势监听', GesturePage(), 'gesture'),
+        _item('如何使用资源文件', ResPage(), 'res'),
+        _item('如何打开第三方应用', LaunchPage(), 'urlluanch'),
       ]),
     );
   }
