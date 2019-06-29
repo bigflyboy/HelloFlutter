@@ -10,8 +10,9 @@ import 'chapter04/animation_study.dart';
 import 'chapter04/animation_study_02.dart';
 import 'chapter04/animation_study_03.dart';
 import 'chapter04/image_study.dart';
+import 'chapter05/pages/index_page.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(IndexPage());
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.

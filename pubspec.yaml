@@ -26,6 +26,7 @@ dependencies:
   flutter_color_plugin: ^0.0.2
   url_launcher: ^5.0.2
   cached_network_image: ^0.8.0
+  flutter_swiper: ^1.1.6
 
 dev_dependencies:
   flutter_test:
