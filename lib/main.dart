@@ -6,6 +6,10 @@ import 'chapter03/launch_page.dart';
 import 'chapter03/less_group-page.dart';
 import 'chapter03/res_page.dart';
 import 'chapter03/stateful_group_page.dart';
+import 'chapter04/animation_study.dart';
+import 'chapter04/animation_study_02.dart';
+import 'chapter04/animation_study_03.dart';
+import 'chapter04/image_study.dart';
 
 void main() => runApp(MyApp());
 
@@ -31,6 +35,10 @@ class MyApp extends StatelessWidget {
         'gesture': (BuildContext context) => GesturePage(),
         'res': (BuildContext context) => ResPage(),
         'urlluanch': (BuildContext context) => LaunchPage(),
+        'image': (BuildContext context) => ImagePage(),
+        'animation': (BuildContext context) => AnimationPage(),
+        'animation02': (BuildContext context) => AnimationPage02(),
+        'animation03': (BuildContext context) => AnimationPage03(),
       },
     );
   }
@@ -77,7 +85,7 @@ class _RouteNavigatorState extends State<RouteNavigator> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Container(
-      child: Column(children: <Widget>[
+      child: ListView(children: <Widget>[
         SwitchListTile(
           title: Text('${byName?'':'不'}通过路由'),
           value: byName,
@@ -93,6 +101,10 @@ class _RouteNavigatorState extends State<RouteNavigator> {
         _item('手势监听', GesturePage(), 'gesture'),
         _item('如何使用资源文件', ResPage(), 'res'),
         _item('如何打开第三方应用', LaunchPage(), 'urlluanch'),
+        _item('如何使用图片', ImagePage(), 'image'),
+        _item('如何使用动画', AnimationPage(), 'animation'),
+        _item('如何使用动画02', AnimationPage02(), 'animation02'),
+        _item('如何使用动画03', AnimationPage03(), 'animation03'),
       ]),
     );
   }
